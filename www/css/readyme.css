@@ -1,0 +1,48 @@
+[data-icon] {
+  font-family: "Skwirrol-Icons"; /* See @font-face declarations at bottom */
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  display: inline-block; /* So we can set its width */
+  white-space: pre;      /* Turn newlines into actual newlines */
+  letter-spacing: -1em;  /* Overlap icons horizontally */
+  line-height: 0;        /* Overlap icons vertically */
+  padding: 0.5em 0;      /* Compensate for zero line height */
+  width: 1em;            /* Compensate for negative letter spacing */  font-weight: 300;      /* Weight for third layer */
+}
+
+[data-icon]:before{
+    content: attr(data-icon);
+    }
+
+.fa {
+    margin:5px;
+}
+.fa:hover {
+   color:red; 
+    
+}
+
+.categories {
+    margin: 5px;
+    padding: 5px;
+    border:1px solid black;
+}
+
+.toprightcorner{
+  position:absolute;
+  align:right;
+    width:98%;
+  }
+
+.banner{
+    text-align: center;
+    width:70%;
+}
+
+.rightalign{
+    text-align: right;
+}
