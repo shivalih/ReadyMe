@@ -27,22 +27,43 @@
 }
 
 .categories {
-    margin: 5px;
-    padding: 5px;
-    border:1px solid black;
-}
-
-.toprightcorner{
-  position:absolute;
-  align:right;
-    width:98%;
-  }
-
-.banner{
-    text-align: center;
-    width:70%;
+    border:1px solid red;
 }
 
 .rightalign{
     text-align: right;
+}
+
+.tableDiv{
+    display:table-row;
+    position: absolute;
+    width:100%;
+}
+
+.columnDivLeft{
+    display:table-cell;
+    width:75%;
+    float:left;
+}
+
+.columnDivRight{
+    display: table-cell;
+    width:25%;
+    float:right;
+}
+
+.box{
+    border:1px solid black;
+}
+
+.borderLeft{
+    border-left:2px solid blue;
+}
+
+.textAlignRight{
+    text-align: right;
+}
+
+.floatRight{
+    float:right;
 }
