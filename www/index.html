@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 
+    <!--
+        Gestures: fist
+        Gestures: full_pinch
+        Gestures: spreadfingers
+        Gestures: swipe
+        Gestures: tap
+        Gestures: thumb_down
+        Gestures: thumb_up
+        Gestures: two_fingers_pinch_open
+        Gestures: v_sign
+        Gestures: wave
+    -->
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="app_framework/3.0/af.ui.css" data-ver="2">
@@ -10,8 +22,10 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
 
         <style>
-            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }                         @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
-            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                                 @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }                         
+            @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                                 
+            @viewport { user-zoom: fixed ; min-zoom: 100% ; }
         </style>
 
         <link rel="stylesheet" href="css/app.css">
@@ -30,19 +44,21 @@
         -->
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="app_framework/3.0/appframework.ui.min.js"></script>
+        <script type="application/javascript" src="js/ReadyMe.js"></script>
         <script type="application/javascript">
             $.afui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
             /* This function runs when the content is loaded.*/
             $.afui.useOSThemes=false;
              $(document).ready(function(){
-                setTimeout(function(){
+                /*setTimeout(function(){
                     $.afui.launch();
-                },1500);
+                },500);*/
+                $.afui.launch();
             });
         </script>
 
+        <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.css">
         <link rel="stylesheet" href="css/readyme.css">
-        <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
 
     </head>
 
@@ -51,18 +67,35 @@
         <div class="view" id="mainpage">
             <div class="pages">
                 <!--<div class="upage-content ac0 content-area vertical-col left panel categories ">-->
-                <div class="panel categories">
-
-                    <div class="tableDiv">
-                        <div class="columnDivLeft box">
-                        <span>Ready Me!</span>
-                            </div>
-                        <div class="columnDivRight borderLeft box">
-                            <span class="fa fa-list-ul fa-2x floatRight"></span>
-                            <span class="fa fa-th fa-2x floatRight"> </span>
+                <div class="panel" id = "homePage">
+                    <div class="topRow bluebox" id="topRow">
+                        <div id="bannerLogo" class="topLeft">
+                            <span>Ready Me!</span>
+                            <!--
+                            <svg height="10" width="100%">
+                                <path id="bannerLine" class="bannerLine" d="M 0 10 H 10" style="stroke:rgb(255,0,0);stroke-width:5" />
+                            </svg>
+-->
+                        </div>
+                        <div class="topRight">
+                            <span id="listView" class="fa fa-list-ul fa-size floatRight"></span>
+                            <span id="tabView" class="fa fa-th fa-size floatRight"> </span>
                         </div>
                     </div>
-
+                    
+                    <div id="bottomRow" class="bottomRow redbox">
+                         <div class="flipContainer">
+                          <div id="flipDiv">
+                            <div class="singleView">Single View
+                                <div >
+                                 
+                                 
+                                </div>
+                              </div>
+                            <div class="multiView">Multi View</div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

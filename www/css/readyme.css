@@ -1,3 +1,46 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 [data-icon] {
   font-family: "Skwirrol-Icons"; /* See @font-face declarations at bottom */
   speak: none;
@@ -6,7 +49,8 @@
   text-transform: none;
   text-align: left;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  display: inline-block; /* So we can set its width */
+  -moz-osx-font-smoothing: grayscale;  
+  display: inline-block; /* So we can set its width */
   white-space: pre;      /* Turn newlines into actual newlines */
   letter-spacing: -1em;  /* Overlap icons horizontally */
   line-height: 0;        /* Overlap icons vertically */
@@ -18,42 +62,166 @@
     content: attr(data-icon);
     }
 
-.fa {
-    margin:5px;
-}
-.fa:hover {
-   color:red; 
-    
+#homePage {
+    display: table;
+    padding: 0;
+    margin: 0 auto;
+    /*position: relative;*/
 }
 
-.categories {
-    border:1px solid red;
+.topRow{
+    background: #ffffff; 
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
+    background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+    
+    
+    height: auto;
+    padding: 4px;
+    margin: 0 auto;
+    position:relative;
+    top:0;
+    display: inline-block;
+    width:100%;
+}
+
+.bottomRow{
+    width:100%;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    display:inline-block;
+}
+
+.topLeft{
+    /*display:table-cell;*/
+    width:75%;
+    float:left;
+}
+
+.topRight{
+    /*display: table-cell;*/
+    width:25%;
+    float:right;
 }
 
 .rightalign{
     text-align: right;
 }
 
-.tableDiv{
-    display:table-row;
-    position: absolute;
-    width:100%;
+.flipContainer { 
+  width: 100%;
+  position: relative;
+  /* DO NOT REMOVE GIVES A DIFFERENT PERSPECTIVE FOR DIV ROTATION
+  /*-webkit-perspective: 800px;
+  perspective: 800px;*/
+    /*top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;*/
 }
 
-.columnDivLeft{
-    display:table-cell;
-    width:75%;
-    float:left;
+#flipDiv {
+  width: 100%;
+  /*height: 100%;*/
+  position: absolute; 
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
-.columnDivRight{
-    display: table-cell;
-    width:25%;
-    float:right;
+#flipDiv div {
+  /*display: block;*/
+  position: absolute;
+  width: 100%;
+  /*height: 100%;*/
+  border-left: 1px solid #565656;
+  border-right: 1px solid #565656;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#flipDiv .singleView {
+  background: #F3F3F3;
+}
+#flipDiv .multiView {
+  background: #F3F3F3;
+  -webkit-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+#flipDiv.flipped {
+  -webkit-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.fa {
+    border: 1px solid #565656;
+    padding:2px;
+    color:#1E3948;
+    display: block;
+
+    border-left: 1px solid #39688C;
+    border-top: 1px solid #39688C;
+    border-right: 1px solid #24435B;
+    border-bottom:  1px solid #24435B;
+}
+
+div.topRight span:last-child{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+div.topRight span:first-child{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.fa:hover {
+    color:#F4F4F4;
+    background: #1e5799;
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+}
+
+.fa-active{
+    background-color: grey;
+    color:white;
+    background: #cedbe9; 
+    background: -webkit-linear-gradient(top,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2    
+                                            84%,#26558b 100%); 
+    background: -webkit-linear-gradient(top,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 
+                                            84%,#26558b 100%); 
+    background: linear-gradient(to bottom,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 
+                                            84%,#26558b 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 ); 
+}
+
+.fa-sml {
+  font-size: 1.5em;
+}
+.fa-mid {
+  font-size: 2em;
+}
+.fa-lrg {
+  font-size: 3em;
 }
 
 .box{
     border:1px solid black;
+}
+
+.bluebox{
+    border:1px solid blue;
+}
+
+.redbox{
+    border:5px solid red;
 }
 
 .borderLeft{
@@ -67,3 +235,36 @@
 .floatRight{
     float:right;
 }
+
+.bannerLine1
+{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: bannerLine 1s alternate infinite;
+  animation: bannerLine 1s alternate infinite;
+}
+
+@-webkit-keyframes bannerLine 
+{
+  from {stroke-dashoffset: 1000;}
+  to {stroke-dashoffset: 0;}
+}
+
+@keyframes bannerLine 
+{
+  from {stroke-dashoffset: 1000;}
+  to {stroke-dashoffset: 0;}
+}
+
+
+.fa-size{
+    font-size: 2.5em;
+}
+
+/* Smartphones with 3.5 inch screen size */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.fa-size{
+        font-size:1.5em;
+    }
+}
+
