@@ -6295,6 +6295,7 @@ if (!Date.now)
      */
     function slideTransition(oldDiv, currDiv, back) {
         /*jshint validthis:true */
+        alert("sliding");
         var that = this;
         if (back) {
             that.css3animate(oldDiv, {

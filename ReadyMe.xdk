@@ -11,7 +11,7 @@
     },
     "XDK-app-designer": "true",
     "sourceDirectory": "www",
-    "startFile": "index.html",
+    "startFile": "LRNavSliders.html",
     "projectFiles": {},
     "projectDirectories": {},
     "libraries": [],

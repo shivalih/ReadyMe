@@ -24,6 +24,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border: 1px solid transparent;
 }
 ol, ul {
 	list-style: none;
@@ -63,10 +66,8 @@ table {
     }
 
 #homePage {
-    display: table;
     padding: 0;
     margin: 0 auto;
-    /*position: relative;*/
 }
 
 .topRow{
@@ -75,14 +76,13 @@ table {
     background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
     
-    
     height: auto;
     padding: 4px;
     margin: 0 auto;
     position:relative;
     top:0;
     display: inline-block;
-    width:100%;
+    width:100%; 
 }
 
 .bottomRow{
@@ -91,16 +91,17 @@ table {
     margin: 0 auto;
     background-color: #FFFFFF;
     display:inline-block;
+    postion:relative;
 }
 
 .topLeft{
-    /*display:table-cell;*/
+    display:table-cell;
     width:75%;
     float:left;
 }
 
 .topRight{
-    /*display: table-cell;*/
+    display: table-cell;
     width:25%;
     float:right;
 }
@@ -115,27 +116,21 @@ table {
   /* DO NOT REMOVE GIVES A DIFFERENT PERSPECTIVE FOR DIV ROTATION
   /*-webkit-perspective: 800px;
   perspective: 800px;*/
-    /*top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;*/
 }
 
 #flipDiv {
   width: 100%;
-  /*height: 100%;*/
-  position: absolute; 
+  position: relative; 
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  transition: transform 1s, -webkit-transform 1s; 
 }
 
 #flipDiv div {
-  /*display: block;*/
+  display: inline-block;
   position: absolute;
   width: 100%;
   /*height: 100%;*/
@@ -147,17 +142,48 @@ table {
 
 #flipDiv .singleView {
   background: #F3F3F3;
+  position:absolute;
+    /*height: 500px;*/
 }
+
 #flipDiv .multiView {
   background: #F3F3F3;
   -webkit-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
+  position: absolute;
 }
 
 #flipDiv.flipped {
   -webkit-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
 }
+
+.sp{
+    position: absolute;
+    background: lightgreen;
+    width: 100%;
+    top:0; left:0; bottom: 0; right: 0;
+    display:none;
+}
+
+.nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: grey;
+    height: 45px;
+}
+
+/*
+#nav div{
+        height: 30px; 
+        width: 30px; 
+        border: 1px solid red; 
+        margin-left: 2px; 
+        display:inline-block;
+        background: orange;
+}
+*/
 
 .fa {
     border: 1px solid #565656;
@@ -267,4 +293,9 @@ div.topRight span:first-child{
         font-size:1.5em;
     }
 }
+
+
+
+
+
 

@@ -49,6 +49,7 @@
             $.afui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
             /* This function runs when the content is loaded.*/
             $.afui.useOSThemes=false;
+        
              $(document).ready(function(){
                 /*setTimeout(function(){
                     $.afui.launch();
@@ -87,9 +88,16 @@
                          <div class="flipContainer">
                           <div id="flipDiv">
                             <div class="singleView">Single View
-                                <div >
-                                 
-                                 
+                                <div id="sp1" class="sp">Page 1</div>
+                                <div id="sp2" class="sp">Page 2</div>
+                                <div id="sp3" class="sp">Page 3</div>
+                                <div id="sp4" class="sp">Page 4</div>
+                                
+                                <div class="nav">
+                                    <a href="#sp1">Page 1</a>
+                                    <a href="#sp2">Page 2</a>
+                                    <a href="#sp3">Page 3</a>
+                                    <a href="#sp4">Page 4</a>
                                 </div>
                               </div>
                             <div class="multiView">Multi View</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Slide Menu Example</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/3.0/af.ui.css" data-ver="2">
+        <link rel="stylesheet" type="text/css" href="app_framework/3.0/icons.min.css">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }                         
+            @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+            @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                                 
+            @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="app_framework/3.0/appframework.ui.js"></script>
+        <script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        intel.xdk.device.setRotateOrientation("portrait");
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+
+        $.afui.setBackButtonVisibility(hidden)
+        
+        
+
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>*/
+        <script type="application/javascript" src="js/ReadyMe.js"></script>
+    
+    </head>
+    <body>
+        <div class="view" id="mainView">
+            <header>
+                <h1>My Header</h1>
+                
+            </header>
+            <div class="pages">
+                <div class="panel" data-title="Page 1" id="page1" selected="true">
+                    Page 1
+                </div>
+                <div class="panel" data-title="Page 2" id="page2" selected="true">
+                    Page 2
+                </div>
+                <div class="panel" data-title="Page 3" id="page3" selected="true">
+                    Page 3
+                </div>
+                <div class="panel" data-title="Page 4" id="page4" selected="true">
+                    Page 4
+                </div>
+            </div>
+            <footer>
+                <a href="#" class="icon home page1">Page 1</a>
+                <a href="#" class="icon camera page2">Page 2</a>
+                <a href="#" class="icon settings page3">Page 3</a>
+            </footer>
+        </div>
+        
+        
+    </body>
+</html>

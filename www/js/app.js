@@ -23,3 +23,26 @@
 
 
 // ...additional event handlers here...
+/*
+<script>
+            $.afui.manageHistory=false;
+        </script>
+        <script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        intel.xdk.device.setRotateOrientation("portrait");
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+
+        document.addEventListener("backbutton", function (e) {
+            alert("back");
+            e.preventDefault();
+        }, false );
+
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>*/
