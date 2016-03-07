@@ -43,7 +43,8 @@
             See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
         -->
         <script type="application/javascript" src="lib/jquery.min.js"></script>
-        <script type="application/javascript" src="app_framework/3.0/appframework.ui.min.js"></script>
+        <!--<script type="application/javascript" src="app_framework/3.0/appframework.ui.min.js"></script>-->
+        <script type="application/javascript" src="app_framework/3.0/appframework.ui.js"></script>
         <script type="application/javascript" src="js/ReadyMe.js"></script>
         <script type="application/javascript">
             $.afui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
@@ -64,19 +65,19 @@
     </head>
 
     <body id="afui" class="v2">
-
-        <div class="view" id="mainpage">
+        <div class="view" id="mainPage">
             <div class="pages">
                 <!--<div class="upage-content ac0 content-area vertical-col left panel categories ">-->
-                <div class="panel" id = "homePage">
+                <div id = "homePage">
+                    
                     <div class="topRow bluebox" id="topRow">
                         <div id="bannerLogo" class="topLeft">
                             <span>Ready Me!</span>
                             <!--
                             <svg height="10" width="100%">
                                 <path id="bannerLine" class="bannerLine" d="M 0 10 H 10" style="stroke:rgb(255,0,0);stroke-width:5" />
-                            </svg>
--->
+                            </svg>-->
+
                         </div>
                         <div class="topRight">
                             <span id="listView" class="fa fa-list-ul fa-size floatRight"></span>
@@ -88,19 +89,17 @@
                          <div class="flipContainer">
                           <div id="flipDiv">
                             <div class="singleView">Single View
-                                <div id="sp1" class="sp">Page 1</div>
-                                <div id="sp2" class="sp">Page 2</div>
-                                <div id="sp3" class="sp">Page 3</div>
-                                <div id="sp4" class="sp">Page 4</div>
-                                
-                                <div class="nav">
-                                    <a href="#sp1">Page 1</a>
-                                    <a href="#sp2">Page 2</a>
-                                    <a href="#sp3">Page 3</a>
-                                    <a href="#sp4">Page 4</a>
-                                </div>
+                                <div id="page1" class="sp panel">Page 1</div>
+                                <div id="page2" class="sp panel">Page 2</div>
+                                <div id="page3" class="sp panel">Page 3</div>
+                                <div id="page4" class="sp panel">Page 4</div>
                               </div>
-                            <div class="multiView">Multi View</div>
+                            <div class="multiView">Multi View
+                                <div id="mpage1" class="mp panel">MPage 1</div>
+                                <div id="mpage2" class="mp panel">MPage 2</div>
+                                <div id="mpage3" class="mp panel">MPage 3</div>
+                                <div id="mpage4" class="mp panel">MPage 4</div>
+                              </div>
                           </div>
                         </div>
                     </div>

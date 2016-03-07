@@ -864,7 +864,6 @@ window.af=window.jq=jQuery;
          * @title $.afui.updateBadge(target,value,[position],[color])
          */
         updateBadge: function(target, value, position, color) {
-            alert("updating");
             if (position === undefined) position = "";
 
             var $target = $(target);
@@ -954,7 +953,6 @@ window.af=window.jq=jQuery;
          * @api public
          */
         loadContent: function(target, newView, back, transition, anchor) {
-                    alert("loading");
             if (this.doingTransition) {
                 return;
             }

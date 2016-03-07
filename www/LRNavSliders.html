@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
 
         
-        <script src="cordova.js" id="xdkJScordova_"></script>
+        <!--<script src="cordova.js" id="xdkJScordova_"></script>-->
         <script src="js/app.js"></script>
         <!-- for your event code, see README and file comments for details -->
         <script src="js/init-app.js"></script>
@@ -33,6 +33,7 @@
         -->
         <script type="application/javascript" src="lib/jquery.min.js"></script>
         <script type="application/javascript" src="app_framework/3.0/appframework.ui.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
         <script type="text/javascript" language="javascript">
     // This event handler is fired once the intel libraries are ready
     function onDeviceReady() {
@@ -40,17 +41,11 @@
         intel.xdk.device.hideSplashScreen();
         intel.xdk.device.setRotateOrientation("portrait");
         setTimeout(function () {
-            $.ui.launch();
         }, 50);
-
-        $.afui.setBackButtonVisibility(hidden)
-        
-        
-
     }
     //initial event handler to detect when intel is ready to roll
     document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
-</script>*/
+</script>
         <script type="application/javascript" src="js/ReadyMe.js"></script>
     
     </head>

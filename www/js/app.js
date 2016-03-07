@@ -23,8 +23,9 @@
 
 
 // ...additional event handlers here...
-/*
-<script>
+
+//<script>
+    /*
             $.afui.manageHistory=false;
         </script>
         <script type="text/javascript" language="javascript">
@@ -36,13 +37,15 @@
         setTimeout(function () {
             $.ui.launch();
         }, 50);
+*/
 
-        document.addEventListener("backbutton", function (e) {
+/*
+        document.addEventListener("backButton", function (e) {
             alert("back");
             e.preventDefault();
         }, false );
-
-    }
+*/
+    //}
     //initial event handler to detect when intel is ready to roll
-    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
-</script>*/
+    //document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+//</script>
