@@ -29,14 +29,14 @@ $(document).ready(function () {
     $(".singleView").children(":last-child").show();*/
     
     $("#listView").on("click", function () {
-        $(".singleView").show();
+        //$(".singleView").show();
         $("#flipDiv").removeClass("flipped");
         $(this).addClass("fa-active");
         $("#tabView").removeClass("fa-active");
     });
     $("#tabView").on("click", function () {
         $("#flipDiv").addClass("flipped");
-        $(".singleView").hide();
+        //$(".singleView").hide();
         $(this).addClass("fa-active");
         $("#listView").removeClass("fa-active");
     });
@@ -88,27 +88,6 @@ $(document).ready(function () {
     });
     $("#page4").on("swipeRight", function(){
         slidePrevPage($(this),"page3");
-    });
-    
-
-    $("#mpage1").on("swipeLeft", function(){
-        $.afui.loadContent("#mpage2", false, false, "slide");
-        //$(this).siblings().hide();
-    });
-    $("#mpage2").on("swipeLeft", function(){
-        $.afui.loadContent("#mpage3", false, false, "slide");
-    });
-    $("#mpage2").on("swipeRight", function(){
-        slidePrevPage($(this),"mpage1");
-    });
-    $("#mpage3").on("swipeLeft", function(){
-        $.afui.loadContent("#mpage4", false, false, "slide");
-    });
-    $("#mpage3").on("swipeRight", function(){
-        slidePrevPage($(this),"mpage2");
-    });
-    $("#mpage4").on("swipeRight", function(){
-        slidePrevPage($(this),"mpage3");
     });
 });
 
